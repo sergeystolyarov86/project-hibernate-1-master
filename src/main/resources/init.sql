@@ -1,3 +1,15 @@
+CREATE TABLE if not exists rpg.player
+(
+    id         BIGINT AUTO_INCREMENT NOT NULL,
+    name       VARCHAR(12)           NOT NULL,
+    title      VARCHAR(30)           NOT NULL,
+    race       INT                   NOT NULL,
+    profession INT                   NOT NULL,
+    birthday   datetime              NOT NULL,
+    banned     BIT(1)                NOT NULL,
+    level      INT                   NOT NULL,
+    CONSTRAINT pk_player PRIMARY KEY (id)
+);
 INSERT INTO rpg.player (id, name, title, race, profession, birthday, level, banned)
 VALUES (1, 'Ниус', 'Приходящий Без Шума', 6, 1, '2009-06-09 00:44:40.000000', 33, '\0'),
        (2, 'Никрашш', 'НайтВульф', 4, 0, '2006-07-09 08:50:40.000000', 58, '\0'),
